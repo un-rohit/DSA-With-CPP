@@ -2,8 +2,8 @@
 using namespace std;
 int main()
 {
-    int n;
-    cout<<"github";
-    cout<<"hi";
+    int a='a';
+    cout<<a;
+    
     return 0;
 }
