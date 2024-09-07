@@ -1,4 +1,6 @@
 {
     "r.lsp.promptToInstall": false,
-    "code-runner.showRunIconInEditorTitleMenu": true
+    "code-runner.showRunIconInEditorTitleMenu": true,
+    "editor.cursorStyle": "line",
+    "editor.cursorBlinking": "blink"
 }
