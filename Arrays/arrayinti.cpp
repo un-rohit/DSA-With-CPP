@@ -14,3 +14,20 @@ int main()
     
     return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// given an array(arr[]) of five elemetns as elemtns 1 = 1 ,2=2 ......
+//  5=5. and the  addresss of each elements is equal to index of element, 
+//  address of arr[] is?
+
