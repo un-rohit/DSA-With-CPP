@@ -1,28 +1,29 @@
-In Java, the double data type denotes a 64-bit double-precision 64-bit IEEE 754 floating point number. In Java, a double is more commonly used than a float in calculations like sine, cos, tan etc... Like in float a double can represent
- both positive and negative numbers
- positive infinity (Double.POSITIVE_INFINITY) and negative infinity (Double.NEGATIVE_INFINITY)
- NaN (a special Not-a-Number value, i.e. mathematically undefinable number).
-A NaN value is used to represent the result of invalid operations such as dividing zero by zero, or square root of a negative number. Its value is represented by a constant in Float class (Double.NaN) etc.
-The 64 bits of a double are divided into three parts.
-   - 1 Sign bit is used to mark the sign of the number.
-   - 11 bits are used to determine the value of the exponent.
-   - remaining 52 bits are used to determine the mantissa (significand).
-For more info Double Precision Floating Point Numbers
+In Java, the primitive char type has a wrapper class called Character, which provide useful methods to work with characters.
+
+See and type the below code to understand the usage of most commonly used methods in Character class:
+isLetter()
+isDigit()
+isLetterOrDigit()
 
 
-The primitive type double has a corresponding wrapper class called Double. Both double and Double can be used interchangeably. Which means, we can say:
-double num1 = 3.4d;
-Double num2 = 1.2d;
-Double total = num1 + num2;
-double valueOfNum2 = total - num1;
-The fixed values 3.4d, 1.2d assigned to num1 and num2 respectively are called double literals. These are suffixed with d to indicate that they are double precision floating point values.
-The default value of a primitive double is 0.0d, when not initialized. However, the default value of a reference of type Double is null, when not initialized.
-We will learn more about the wrapper class Double later.
+Note: Please don't change the package name.
 
-Select all the correct statements given below.
-
-
-
-Answer 
-
-A double uses 8 bytes of memory
+package q10813;
+public class CharacterDemo {
+	public static void main(String[] args) {
+		char ch1 = 'A';
+		char ch2 = '7';
+		char ch3 = '*';
+		char ch4 = '\'';
+		char ch5 = '"';
+		char ch6 = ' ';
+		System.out.println("ch1 is a character: " + Character.isLetter(ch1));
+		System.out.println("ch2 is a character: " + Character.isLetter(ch2));
+		System.out.println("ch2 is a digit: " + Character.isDigit(ch2));
+		System.out.println("ch1 is a letter or digit: " + Character.isLetterOrDigit(ch1));
+		System.out.println("ch3 is a letter or digit: " + Character.isLetterOrDigit(ch3));
+		System.out.println("ch4 contains escape sequence to print single-quote: " + ch4);
+		System.out.println("ch5 contains a double-quote char, which is treated as a normal char : " + ch5);
+		System.out.println("ch6 is a space char: >" + ch6 + "<");
+	}
+}
