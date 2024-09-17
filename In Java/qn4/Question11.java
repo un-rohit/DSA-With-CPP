@@ -1,21 +1,59 @@
-Retype the below code and submit it to see the result.
-If you expect it to print 0.3, there is a nasty surprise for you!! It actually evaluates to 0.30000000000000004
+Write the code in the below main() method to calculate and print the Total and Average marks scored by a student from the input given through the command line arguments.
 
-To understand what is wrong, you should know more about how floating point numbers are represented in binary format(base-2). The number of bits used for precision limits the set of rational numbers that can be represented exactly using a float or a double. This is why we get results like these when we use float or double in arithmetic operations.
+Assume that four command line arguments name, marks1, marks2, marks3 will be passed to the main() method in the below class with name TotalAndAvgMarks.
 
-Note: Never use float or double in currency calculations which require a high degree of precision. 
-BigDecimal is the right choice in Java for such calculations.
-We will learn about BigDecimal in the next sections.
+Sample Input and Output:
+For example, if the command line arguments to the main() method are : Narmada 75.50 67.75 78.25.
+The program should print the result as:
+	Name = Narmada
+	Marks1 = 75.5
+	Marks2 = 67.75
+	Marks3 = 78.25
+	Total Marks = 221.5
+	Average Marks = 73.833336
+Note: Consider the three marks passed in the command line arguments as floats.
 
-Note: Please don't change the package name.
+Note: Please don't change the package name
+
+
 
 Answer 
 
-package q10859;
-public class FloatingPointArithmetic {
+package q10817;
+
+public class TotalAndAvgMarks {
+	
 	public static void main(String[] args) {
-		double x = 0.2;
-		double y = 0.1;
-		System.out.print(x + y);
+		
+		String name = args[0];
+		
+		float m1 =Float.parseFloat(args[1]);
+		
+		float m2 = Float.parseFloat(args[2]);
+		
+		float m3 =Float.parseFloat(args[3]);
+		
+		float total =m1+m2+m3;
+		
+		float avg = total/3;
+		
+		System.out.println("Name = " + name);
+		
+		System.out.println("Marks1 = "  + m1 );
+		
+		System.out.println("Marks2 = "  + m2);
+		
+		System.out.println("Marks3 = " + m3 );
+		
+		System.out.println("Total Marks = " + total);
+		
+		System.out.println("Average Marks = " +avg );
+		
+		
+		
+		
+		
+
+	
 	}
 }

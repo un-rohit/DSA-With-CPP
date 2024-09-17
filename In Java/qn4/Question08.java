@@ -1,22 +1,35 @@
-The Double class wraps a primitive double value.
-This class provides constants and methods that are useful while working with large precision fractional numbers. For example it has a method Double.parseDouble(String s) which can be used to convert a string value to a double
-Double y = Double.parseDouble("380.234d");
-//parses the string literal "380.234d"
-In the below code, the main method of CalculateDifference will be passed two arguments. Both the values can be any number between Double.MIN_VALUE to Double.MAX_VALUE.
+The wrapper class Character, wraps a single char value and provides useful methods to work with its content.
 
-Complete the below code so that it produces the correct output.
+See and type the below code to understand the usage of most commonly used methods in Character class:
+isUpperCase()
+isLowerCase()
+toUpperCase()
+toLowerCase()
+isWhitespace()
 
 
 Note: Please don't change the package name.
 
-Answer 
-
-package q10857;
-public class CalculateDifference {
+package q10814;
+public class CharacterDemo2 {
 	public static void main(String[] args) {
-		double firstValue =Double.parseDouble(args[0]) ;
-		double secondValue =Double.parseDouble(args[1]) ;
-		
-		System.out.println("The difference of args[0] and args[1] is : " + (firstValue - secondValue));
+		char ch1 = 'A';
+		char ch2 = 'd';
+		char ch3 = '-';
+		char ch4 = '\t';
+		char ch5 = '\n';
+		char ch6 = '\b';
+		char ch7 = ' ';
+		System.out.println("ch1 is an uppercase char: " + Character.isUpperCase(ch1));
+		System.out.println("ch1 is a lowercase char: " + Character.isLowerCase(ch1));
+		System.out.println("ch2 is a lowercase char: " + Character.isLowerCase(ch2));
+		System.out.println("ch2 to uppercase: " + Character.toUpperCase(ch2));
+		System.out.println("ch1 to lowercase: " + Character.toLowerCase(ch1));
+		System.out.println("ch3 is a letter or digit: " + Character.isLetterOrDigit(ch3));
+		System.out.println("ch3 is a whitespace char: " + Character.isWhitespace(ch3));
+		System.out.println("ch4 (tab char) is a whitespace char: " + Character.isWhitespace(ch4));
+		System.out.println("ch5 (newline char) is a whitespace char: " + Character.isWhitespace(ch5));
+		System.out.println("ch6 (backspace char) is a whitespace char: " + Character.isWhitespace(ch6));
+		System.out.println("ch7 (space char) is a whitespace char: " + Character.isWhitespace(ch7));
 	}
 }
