@@ -1,20 +1,20 @@
-In Java, the byte data type denotes a 8-bit signed (two's-complement) integer, which can hold any value between - 128 (-27) and 127 (27-1).
+Java version 7 has added a new feature to improve the readability of Numeric Literals.
+We can include an underscore ('_') in numeric literals to show grouping of digits.
+For example:
+long mySalary = 900_000L;// Which is equal to 900000 (Nine Hundred Thousand)
+long magicNumberInHex = 0xCAFE_BABE; // Want to know more about Magic Number?
 
-The primitive type byte has a corresponding wrapper class called Byte. Both byte and Byte can be used interchangeably. Which means, we can say:
-byte num1 = 3;
-Byte num2 = 4;
-Byte total = (byte)(num1 + num2);
-byte valueOfNum2 = (byte)(total - num1);
-The default value of a primitive byte is 0, when not initialized. However, the default value of a reference of type Byte is null, when not initialized.
-We normally use int instead of byte to hold integer values. However (like in the case of short), when using large arrays if we know that the values stored will be within the range of a byte, using a byte array may help saving memory.
-A byte data type can also be used to indicate to a programmer that the value it will hold is small. More commonly they are used while manipulating raw data using byte arrays.
+Note: Underscore is only for programmer's readability, it is completely ignored during computations.
 
-We will learn more about the wrapper class Byte later.
+Usage rules for underscore:
+Underscore can only be used between two digits.
+Underscore cannot be used at the beginning or ending of a number.
+Underscore cannot be used before a suffix like F (used in float), L (used in Long) or D (used in Double).
+Underscore cannot be used before or between a radix prefix used for binary or octal or hex numbers
 
-Select all the correct statements given below.
-
+Select all the correct answers given bellow'
 
 
 Answer 
 
-The max value a byte can be assigned is 0b1111111
+int mySelf = 0___0___7;
