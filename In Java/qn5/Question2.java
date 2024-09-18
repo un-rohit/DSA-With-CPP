@@ -1,32 +1,53 @@
-In Java, an expression always has a type, which is deduced from the types of the variables, methods or literals involved in that expression.
+The if-else-if construct extends the if-else construct by allowing to chain multiple if constructs as shown below:
+if (expression_1) {
+	statement_1;
+} else if (expression_2) {
+	statement_2;
+} else if (expression_3) {
+	statement_3;
+} else if (expression_4) {
+	statement_4;
+} else {
+	statement_5;
+}
+As shown in the above syntax, multiple if constructs can be chained to any length. The else construct which appears at the end is optional, and if it is to be included it has to be only at the end.
 
-Type conversion is performed to convert one or both the operands to an appropriate data type before evaluation.
+The if-else-if construct is used whenever we have multiple mutually exclusive if conditions which work on the same input.
 
-Type conversion means converting one data type value into another data type value.
+In a if-else-if construct the conditions are evaluated from top to bottom. Whenever a condition evaluates to true (1), the control enters into that if-block and after that the control comes out of the complete if-else-if construct ignoring all the remaining if and else constructs that may exist below the currently satisfied if-block.
 
-There are two types of type conversions: implicit conversion (also called type coercion) and explicit conversion (also called type casting).
+For example, if the condition in the expression_2 is the first condition to evaluate to true after executing statement_2 the control comes out of the complete if-else-if construct.
 
-In case of implicit type conversion, compiler automatically converts one data type value into another data type value.
+The below program TicketPrice has a method printTicketPrice it takes one parameter age of type int .
 
-Implicit type conversions can occur during assignment or while using any other operators. During assignment the R-value is converted to the type of L-value.
+Write the missing lines of code inside the method which employs if-else-if statement to check the age and print appropriate ticket price according to the given age groups:
+The price is 0 for an infant (less than or equal to 3 years) and a centenarian (greater than or equal to 100 years).
+The price is 5 for an children (less than or equal to 13 years) and for senior citizens (greater than or equal to 60 years).
+The price is 10 for all the remaining age groups.
+Do no remove or change the existing values or print statements, fill in the missing conditions using the if-else-if statement.
 
-When values of different data types are used in arithmetic, relational and logical operators, the value of the lower size data type size is converted automatically into the data type of higher size before the evaluation.
-
-For example in the statement float a = 5 + 5.6; integer type value 5 is automatically converted into a float type as 5.0 before the addition is performed.
-
-See and retype the below code.
+Do use a the System.out.println() instead of System.out.print().
 
 Note: Please don't change the package name.'
 
 
-package q10842;
-public class ImplicitConversion {
-	public static void main(String[] args) {
-		int i = 20, intsum;
-		char ch = 'a';
-		float floatsum;
-		intsum = i + ch;
-		floatsum = i + ch;
-		System.out.println("Integer result = " + intsum + " Float result = " + floatsum);
+
+package q10847;
+public class TicketPrice {
+	int ia = 3;
+	int c = 13;
+	int s = 60;
+	int ca = 100;
+	
+	public void printTicketPrice(int age) {
+		
+			//fill the appropriate if condition
+			if(age<=3 || age>=100){
+			System.out.println("Ticket Price: 0");
+			}else if(age<=13 || age>=s){
+			System.out.println("Ticket Price: 5");
+		}else{	//fill the appropriate else condition
+			System.out.println("Ticket Price: 10");
+		}
 	}
 }

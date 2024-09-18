@@ -1,43 +1,26 @@
-A programmer can instruct the compiler to explicitly convert a value of one type to another using a typecast operator.
+See the below code which uses a nested if-then-else statement for calculating grade for a given GPA.
 
-When a typecast operator is explicitly used, the type conversion process is called explicit type conversion or type casting.
+The class GradeCalculator has a method calculateGrade(double gpa). It receives a double argument gpa, a decimal number between 0.0 and 5.0. The method uses a if-then-else statement to display the appropriate Grade for the GPA.
 
-The syntax for using a typecast operator is: (data_type) expression, Where the expression is converted to the target data_type enclosed within the parentheses.
+Add another condition that will print Grade: D when the given GPA is between 2.0 and 2.49 (both inclusive).
 
-Here the expression may contains constants or variables and the data_type must be a primitive data type or void.
+Do use a the System.out.println() instead of System.out.print().
 
-For example, the expression (float)1 / 3 is evaluated as 1.0 / 3 yielding 0.333333, where as 1 / 3 yields 0.
+Note: Please don't change the package name.
 
-In the expression ((int)num)%2, if num is a float variable with value 5.5, then the expression evaluates to 1.
-
-Below is an example which demonstrates type casting:
-public class ExplicitConversion {
-	public static void main(String[] args) {
-		float x, y;
-		x = 7 / 3;
-		y = (float) 7 / 3;
-		System.out.println("x = " + x + " y = " + y);
-	}
-}
-In the above code, produces the output as x = 2.0 y = 2.3333333.
-
-See and retype the below code.
-
-Note: Please don't change the package name.'
-
-
-
-Answer 
-
-package q10843;
-public class ExplicitConversion {
-	public static void main(String[] args) {
-		int i = (int)18.99f;
-		System.out.println("int value = " + i);
-		float f = i;
-		System.out.println("after float widening : " + f);
-		int big = 1234567890;
-		float approx = big;
-		System.out.println("The lose value = " + (big - (int)approx));
+package q10848;
+public class GradeCalculator {
+	public void calculateGrade(double gpa) {
+		if (gpa >= 4.5) {
+			System.out.println("Grade: A");
+		} else if (gpa >= 3.5 && gpa <= 4.49) { 
+			System.out.println("Grade: B");
+		} else if (gpa >= 2.5 && gpa <= 3.49) { 
+			System.out.println("Grade: C");
+		}  else if (gpa>=2.0 && gpa<=2.49){
+			System.out.println("Grade: D");
+		}else {
+			System.out.println("Grade: F");
+		}
 	}
 }
