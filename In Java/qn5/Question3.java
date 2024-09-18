@@ -1,26 +1,58 @@
-See the below code which uses a nested if-then-else statement for calculating grade for a given GPA.
+In a switch statement when a break; is not used under a case, a fall-through happens.
 
-The class GradeCalculator has a method calculateGrade(double gpa). It receives a double argument gpa, a decimal number between 0.0 and 5.0. The method uses a if-then-else statement to display the appropriate Grade for the GPA.
+Meaning when the value matches such a case, the control flow will execute the statements under that case and will continue to execute other cases present under it until it encounters a break; statement.
 
-Add another condition that will print Grade: D when the given GPA is between 2.0 and 2.49 (both inclusive).
+For example, click on the Submit without making any changes to the below code to observe the fall-through. Observe the output when 1, 2, 3, 4 or 10 is passed.
 
-Do use a the System.out.println() instead of System.out.print().
+In the below program, class FallThroughDemo is passed an integer argument into its main(...) method.
+
+The code in the main(...) method converts the first argument available in args[0] into an integer value and uses it in the switch statement.
+
+In the program given below, add break; statements appropriately inside the switch statement such that when :
+ 1 is passed, the code should print
+One
+Two
+Three
+ 2 is passed, the code should print
+Two
+Three
+ 3 is passed, the code should print
+Three
+ 4 is passed, the code should print
+Four
+ 10 is passed, the code should print
+Ten
+ any other number except 1, 2, 3, 4 and 10 is passed, the code should print
+Some other number
+
 
 Note: Please don't change the package name.
 
-package q10848;
-public class GradeCalculator {
-	public void calculateGrade(double gpa) {
-		if (gpa >= 4.5) {
-			System.out.println("Grade: A");
-		} else if (gpa >= 3.5 && gpa <= 4.49) { 
-			System.out.println("Grade: B");
-		} else if (gpa >= 2.5 && gpa <= 3.49) { 
-			System.out.println("Grade: C");
-		}  else if (gpa>=2.0 && gpa<=2.49){
-			System.out.println("Grade: D");
-		}else {
-			System.out.println("Grade: F");
-		}
-	}
+package q10872;
+public class FallThroughDemo {
+public static void main(String[] args) {
+int value = Integer.parseInt(args[0]);
+switch (value) {
+      case 1:	
+      	System.out.println("One");
+		System.out.println("Two");
+		System.out.println("Three");
+		break;
+	case 2:
+		System.out.println("Two");
+		System.out.println("Three");
+		break;
+    case 3:
+		System.out.println("Three");
+		break;
+	case 4:
+		System.out.println("Four");
+		break;
+	case 10:
+		System.out.println("Ten");
+		break;
+	default:
+	     System.out.println("Some other number");
+    }
+  }
 }

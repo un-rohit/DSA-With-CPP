@@ -1,23 +1,29 @@
-Write code which uses if-then-else statement to check if a given account balance is greater or lesser than the minimum balance.
+A loop in a programming language is a statement which allows code to be repeatedly executed. A for-each loop is a kind of control statement for iterating over a collection of items.
 
-Write a class BalanceCheck with public method checkBalance that takes one parameter balance of type double.
+for (type item: iterableCollection) {
+	// code statement 1
+	// code statement 2
+	...
+}
+A for-each statement starts with for (type item: iterableCollection)
+followed by its body.
+It is a good practice to always keep the body which contains the code to be executed within an opening-brace { and a closing-brace }.
+It is called a for-each loop because the statements contained in the body are executed once for each item in iterableCollection
 
-Use if-then-else statement and print Balance is low if balance is less than 1000. Otherwise, print Sufficient balance.
+Click on  to understand the working of for-each loop.
 
-Note: You need not write the main method. You can directly write the checkBalance(double balance) method in the BalanceCheck class.
+The class ForEachDemo creates an array of integers named numArr. (We will learn about arrays in later sections.)
+The code in the main(...) method should use a for-each loop to iterate over the array numArr.
+Fill in the missing code for the for-each statement such that it initializes int i with each element in numArr and executes the code in the for-each statement's body to print i.
 
-Use System.out.println() instead of System.out.print().
+Note: Please don't change the package nam
 
-Note: Please don't change the package name.
-
-package q10850;
-
-class BalanceCheck{
-	public void checkBalance(double bal){
-		if(bal<1000){
-			System.out.println("Balance is low");
-		}else
-		System.out.println("Sufficient balance");
+package q10875;
+public class ForEachDemo {
+	public static void main(String[] args) {
+		int[] numArr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+		for ( int i: numArr) {
+			System.out.println(i);
+		}
 	}
-	
 }

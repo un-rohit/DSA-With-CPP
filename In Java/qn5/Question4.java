@@ -1,20 +1,75 @@
-See the below code which uses a if-then-else statement for calculating AM or PM for a given hour.
+Write a class NameOfTheDay with a main method. The method receives one command line argument. The method should convert the argument String to int.
 
-The class AmPmCalculator has a method checkAmPm it takes one parameter hour of type int, with value between 0 and 23. The method should use if-then-else statement to display AM or PM.
+The program should print the name of the weekday based on the value of the day (1-7), using the switch statement.
 
-Fill in the if condition to check if hour is between 0 and 11 (both inclusive) for AM. Fill in the else if condition to check if hour is between 12 and 23 (both inclusive) for PM
+For example:
+Cmd Args : 3
+Wednesday 
+Similarly, if the input is given as 10 then the output should be Number 10 is not in the range 1 to 7.
 
-Note: Use System.out.println() instead of System.out.print().
+For example:
+Cmd Args : 10
+Number 10 is not in the range 1 to 7
+Ensure that the name of the day starts with a capital letter.
 
-package q10849;
-public class AmPmCalculator {
-	public void checkAmPm(int hour) {
-		if (hour>=0 && hour<=11 ) { //fill the condition for AM here 
-			System.out.println("AM");
-		} else if (hour>=12 && hour<=23) { //fill the condition for PM here
-			System.out.println("PM");
-		} else { 
-			System.out.println("Invalid Hour!!");
+Note: Please don't change the package name.
+
+package q10874;
+
+public class NameOfTheDay{
+	
+	public static void main(String[] args){
+		
+		int a=Integer.parseInt(args[0]);
+		
+		switch(a){
+			
+			case 1:
+				
+				System.out.println("Monday");
+				
+				break;
+				
+				case 2 :
+					
+					System.out.println("Tuesday");
+					
+					break;
+					
+					case 3 :
+						
+						System.out.println("Wednesday");
+						
+						break;
+						
+						case 4:
+							
+							System.out.println("Thursday");
+							
+							break;
+							
+							case 5:
+								
+								System.out.println("Friday");
+								
+								break;
+								
+								case 6:
+									
+									System.out.println("Saturay");
+									
+									break;
+									
+									case 7:
+										
+										System.out.println("Sunday");
+										
+										break;
+										
+										default :
+										
+										System.out.println("Number " +a + " is not in the range 1 to 7");
+										
 		}
 	}
 }
