@@ -6,6 +6,7 @@ Identify the error and correct it.
 
 
 package q11130;
+public class Student {
 	private String id;
 	private String name;
 	private int age;
