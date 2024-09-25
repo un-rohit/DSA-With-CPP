@@ -1,15 +1,24 @@
-The class PrinHello is created with a main method. The method receives river names as arguments.
+A constructor must be written inside the class body (i.e. inside the open brace { and the closing brace } of the class body).
 
-See and retype the below code to see the result.
+Identify the errors and correct them.
 
-Note: Please don't change the package name.
 
-package q10839;
-public class PrintHello {
-	public static void main(String[] args) {
-		String suffix = "River";
-		for (String riverName : args) {
-			System.out.println(riverName + suffix);
-		}
+package q11161;
+public class Student {
+	private String id;
+	private String name;
+	private int age;
+	private char gender;
+	
+
+
+	public Student(String name, String rollNo, int age, char gender) {
+		this.id = id;
+		this.name = name;
+		this.age = age;
+		this.gender = gender;
 	}
-}
+	}
+
+
+    
