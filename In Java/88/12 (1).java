@@ -1,34 +1,17 @@
-The below program explains different StringBuffer constructors. Follow the comments given below and write the missing code.
+Among the various classes available in java.lang package, System is one of the most commonly used classes after String.
 
-The below program has a class StringbufferExample with main method. The program takes input from the command line arguments. Print the output as follows.
+The System class can neither be instantiated (since it has a private constructor) nor can be extended (since it is declared as final).
 
-Sample Input and Output:
-Cmd Args : Hello World
-Initial capacity is: 16
-Capacity after passing parameter is: 27
-Creating a StringBuffer object with the given capacity: 50
-
-
-package q24215;
-public class StringbufferExample {
-	public static void main (String args[]) {
-		// create instance of StringBuffer
-		// find the initial capacity
-		//find the capactiy after passing a parameter args[0] using command line argument
-		// find the capatity by intializing capatity to 50
-		StringBuffer Initial=new StringBuffer();
-		
-		System.out.println("Initial capacity is: "+ Initial.capacity());
-		
-		Initial=new StringBuffer(args[0]);
-		
-		System.out.println("Capacity after passing parameter is: "+Initial.capacity());
-		
-		Initial=new StringBuffer(50);
-		
-		System.out.println("Creating a StringBuffer object with the given capacity: "+Initial.capacity());
-		
-	}
-}
+System class has three important public static fields:
+out - is accessed as System.out. This out field is of type PrintStream. The out refers to the standard output stream.
+err - is accessed as System.err. This err field is of type PrintStream. The err refers to the standard error stream.
+in - is accessed as System.in. This in field is of type InputStream. The in refers to the standard input stream.
+The System class provides a method called System.console(), which returns the java.io.Console object associated with the running Java process (Java Virtual Machine). Select all the correct statement given below.
 
 
+
+Answer
+
+In the statement
+System.out.println("Uranus");
+println is a method.
