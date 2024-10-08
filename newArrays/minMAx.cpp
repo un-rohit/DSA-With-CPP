@@ -18,7 +18,7 @@ int main()
         // {
         //     smallest = num[i];
         // }
-    }
+    } 
 
     cout << "Smallest = " << smallest<<endl;
     cout<<" Largest = "<<largest;
