@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+// TC O(n)
 void reverseArray(int arr[], int sz)
 {
     int start = 0, end = sz - 1;
