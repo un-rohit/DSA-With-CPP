@@ -4,12 +4,11 @@ using namespace std;
 int main()
 {
     vector<char> vec = {'a', 'b', 'c', 'd'};
+    cout << "Size of vector =" << vec.size();
 
-    cout<<"size = " <<vec.size() << endl;
-    for (char val : vec)  //  for each loop
+       for (char val : vec) //  for each loop
     {
         cout << val << endl;
     }
-
     return 0;
 }
