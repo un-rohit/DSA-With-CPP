@@ -1,0 +1,1 @@
+ttps://github.com/john/sign-language-models/raw/main/models/sign_language_model.onnx
