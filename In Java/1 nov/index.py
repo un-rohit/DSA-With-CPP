@@ -37,6 +37,8 @@ plt.ylabel('Accuracy')
 plt.legend()
 plt.show()
 
+
+print
 # Plot a few test images and their predictions
 predictions = model.predict(test_images)
 plt.figure(figsize=(10, 10))

@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "iostream": "cpp"
+    },
+    "editor.cursorBlinking": "blink",
+    "editor.cursorWidth": 3,
+    "editor.cursorStyle": "line"
+}
