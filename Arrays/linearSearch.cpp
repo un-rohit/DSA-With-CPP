@@ -21,7 +21,6 @@ int main()
     cin>>key;
     bool found = LinearSearch(arr, 4, key);
 
-bv b 
     if (found)
     {
         cout << "key is present";
